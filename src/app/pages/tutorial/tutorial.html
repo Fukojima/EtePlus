@@ -1,0 +1,42 @@
+
+
+
+<ion-content class="slide1" fullscreen>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="false">
+    <ion-slide class="slide1">
+      
+      <img  src="assets/img/slid1.png" class="sld" />
+     <button class="but2" [routerLink]="['/home']" routerdirection="foward" >
+      </button>
+      
+        
+
+    </ion-slide>
+
+    <ion-slide>
+
+      <img src="assets/img/slid2.png" class="slide-image" />
+    
+    </ion-slide>
+
+    <ion-slide >
+     <img src="assets/img/slid3.png" class="slide-image" />
+
+      
+
+      
+
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/slid4.png" class="slide-image" />
+      <div class=" button-hand">
+        <button class="but" [routerLink]="['/home']" routerdirection="foward" >
+          <div class=""></div>
+        </button>
+      </div>
+
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

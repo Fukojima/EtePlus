@@ -1,0 +1,30 @@
+
+ion-toolbar{
+--background:transparent;
+background-color:#0AFF9B;
+}
+
+ion-content{
+
+  --background:transparent;
+}
+
+
+ .home{
+ background:url('assets/img/home5.png') no-repeat center center fixed;
+ width:100%;
+ background-size: cover;
+
+
+ }
+
+ .but{
+  color:white;
+  position: absolute;
+  bottom: 20%;
+  background:transparent;
+  left:42%;
+  height: 55px;
+  width: 55px;
+  
+  }
