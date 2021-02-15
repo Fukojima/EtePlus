@@ -1,8 +1,9 @@
-# Ionic Angular Conference Application
+# ETEPLUS
 
-This application is purely a kitchen-sink demo of the Ionic Framework and Angular.
+Aplicacação mobile desenvolvida para apoio no estudo preparatório para o vestibular do ETE(Escola Técnica Estadual).
 
-**There is not an actual Ionic Conference at this time.** This project is just to show off Ionic components in a real-world application. Please go through the steps in [CONTRIBUTING](https://github.com/ionic-team/ionic-conference-app/blob/master/.github/CONTRIBUTING.md) before submitting an issue.
+Mobile application developed to support the preparatory study for the ETE(State Technical School) entrance exam.
+
 
 
 ## Table of Contents
