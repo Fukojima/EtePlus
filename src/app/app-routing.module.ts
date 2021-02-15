@@ -42,7 +42,8 @@ const routes: Routes = [
   {
     path: 'disciplina',
     loadChildren: () => import('./pages/disciplina/disciplina.module').then( m => m.DisciplinaPageModule)
-  },  {
+  },
+  {
     path: 'mat',
     loadChildren: () => import('./pages/mat/mat.module').then( m => m.MatPageModule)
   },
@@ -50,6 +51,23 @@ const routes: Routes = [
     path: 'port',
     loadChildren: () => import('./pages/port/port.module').then( m => m.PortPageModule)
   },
+  {
+    path: 'quiz',
+    loadChildren: () => import('./pages/quiz/quiz.module').then( m => m.QuizPageModule)
+  },
+  {
+    path: 'quizmat',
+    loadChildren: () => import('./pages/quizmat/quizmat.module').then( m => m.QuizmatPageModule)
+  },
+  {
+    path: 'ass',
+    loadChildren: () => import('./pages/ass/ass.module').then( m => m.AssPageModule)
+  },
+
+
+  
+ 
+
 
 
 

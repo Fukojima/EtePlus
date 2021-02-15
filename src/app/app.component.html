@@ -14,13 +14,13 @@
 ETE+
           </ion-list-header>
           <ion-menu-toggle autoHide="false">
-            <ion-item  detail="false">
+            <ion-item [routerLink]="['/disciplina']" routerdirection="foward" detail="false">
               <ion-icon slot="start" name="book"></ion-icon>
-              <ion-label>Área de estudos</ion-label>
+              <ion-label >Área de estudos</ion-label>
             </ion-item>
           </ion-menu-toggle>
           <ion-menu-toggle autoHide="false">
-            <ion-item  detail="false">
+            <ion-item [routerLink]="['/login']" routerdirection="foward" detail="false">
               <ion-icon slot="start" name="create"></ion-icon>
               <ion-label>Como me inscrevo?</ion-label>
             </ion-item>

@@ -1,46 +1,304 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Signup</ion-title>
-  </ion-toolbar>
+  <ion-navbar color = "danger">
+    <ion-title >
+      Quiz Game
+      Timer {{timerVal}}
+    </ion-title>
+  </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
-  <div class="signup-logo">
-    <img src="assets/img/appicon.svg" alt="Ionic Logo">
+  <div *ngIf="fressy">
+    <h1 style="font-size: 32px;font-family: cursive" >welcome to the quiz game</h1>
+   
+    <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" [(ngModel)] = name></ion-input>
+      </ion-item>
+      
+      
+
+      
+    <button id="btn" style=" background-color: red" ion-button (click)="btn0()" block>Start Game</button>
+    <button id="btn" style=" background-color: red" ion-button (click)="about1()" block>about</button>
   </div>
+  
 
-  <form #signupForm="ngForm" novalidate>
-    <ion-list lines="none">
-      <ion-item>
-        <ion-label position="stacked" color="primary">Username</ion-label>
-        <ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
-        </ion-input>
-      </ion-item>
-      <ion-text color="danger">
-        <p [hidden]="username.valid || submitted == false" class="ion-padding-start">
-          Username is required
-        </p>
-      </ion-text>
 
-      <ion-item>
-        <ion-label position="stacked" color="primary">Password</ion-label>
-        <ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
-        </ion-input>
-      </ion-item>
-      <ion-text color="danger">
-        <p [hidden]="password.valid || submitted == false" class="ion-padding-start">
-          Password is required
-        </p>
-      </ion-text>
-    </ion-list>
 
-    <div class="ion-padding">
-      <ion-button (click)="onSignup(signupForm)" type="submit" expand="block">Create</ion-button>
-    </div>
-  </form>
 
+<div *ngIf="ComputerTrivia " >
+
+ <!-- Category: Computer Trivia -->
+
+ <h1 id="h101">Category: Computer Trivia</h1>
+
+ <p id="ph"> 1. SNES is the acronym for what popular gaming console released in the early 1990s?</p>
+ 
+ <ion-item>
+   <ion-label>Super Nintendo Entertainment System</ion-label>
+   <ion-checkbox [(ngModel)]="A1" ></ion-checkbox>
+ </ion-item>
+ 
+ <ion-item>
+   <ion-label>Spider Nintendo Entertainment System</ion-label>
+   <ion-checkbox [(ngModel)]="A2"></ion-checkbox>
+ </ion-item>
+ 
+ <ion-item>
+   <ion-label>Soda Nintendo Entertainment System</ion-label>
+   <ion-checkbox [(ngModel)]="A3"></ion-checkbox>
+ </ion-item>
+
+ <p id="ph">2. Mark Zuckerberg was one of the founders of which social networking site?</p>
+
+ <ion-item>
+   <ion-label>Twitter</ion-label>
+   <ion-checkbox [(ngModel)]="B1"></ion-checkbox>
+ </ion-item>
+ 
+ <ion-item>
+   <ion-label>WhatsApp</ion-label>
+   <ion-checkbox [(ngModel)]="B2"></ion-checkbox>
+ </ion-item>
+ 
+ <ion-item>
+   <ion-label>Facebook</ion-label>
+   <ion-checkbox [(ngModel)]="B3"></ion-checkbox>
+ </ion-item>
+ 
+ <p id="ph">3. What was the first console video game that allowed the game to be saved?</p>
+
+
+ <ion-item>
+   <ion-label>The Legend of Zelda </ion-label>
+   <ion-checkbox [(ngModel)]="C1"></ion-checkbox>
+ </ion-item>
+ 
+ <ion-item>
+   <ion-label>Fifa</ion-label>
+   <ion-checkbox [(ngModel)]="C2"></ion-checkbox>
+ </ion-item>
+ 
+ <ion-item>
+   <ion-label>Need for speed</ion-label>
+   <ion-checkbox [(ngModel)]="C3"></ion-checkbox>
+ </ion-item>
+
+ <p id="ph"> 4.Regarding data storage, what does the acronym SSD stand for?</p>
+
+ <ion-item>
+   <ion-label>Solid State Drive</ion-label>
+   <ion-checkbox [(ngModel)]="D1"></ion-checkbox>
+ </ion-item>
+ 
+ <ion-item>
+   <ion-label>Solid Solid Drive</ion-label>
+   <ion-checkbox [(ngModel)]="D2"></ion-checkbox>
+ </ion-item>
+ 
+ <ion-item>
+   <ion-label>State Solid Drive</ion-label>
+   <ion-checkbox [(ngModel)]="D3"></ion-checkbox>
+ </ion-item>
+
+
+ <p id="ph"> 5. The Connecticut Leather Company later became what toy company that was popular in the 1980s for its Cabbage Patch Kids and video game consoles?</p>
+ 
+ <ion-item>
+   <ion-label>Coleco</ion-label>
+   <ion-checkbox [(ngModel)]="E1"></ion-checkbox>
+ </ion-item>
+ 
+ <ion-item>
+   <ion-label>Colee</ion-label>
+   <ion-checkbox [(ngModel)]="E2"></ion-checkbox>
+ </ion-item>
+ 
+ <ion-item>
+   <ion-label>Doleed</ion-label>
+   <ion-checkbox [(ngModel)]="E3"></ion-checkbox>
+ </ion-item>
+ <button ion-button (click)="btn1()" block style="background-color: red">next</button> 
+ 
+</div>
+
+
+<div *ngIf= "MoneyTrivia">
+
+ <!-- Category: Money Trivia -->
+ <h1 id="h101">Money Trivia </h1>
+
+ <ion-list>
+   <ion-item>
+     
+     <ion-label>What is the name for the monetary unit used in Thailand?</ion-label>
+     <ion-select [(ngModel)]="ThaiBhat">
+       <ion-option   value="Thai Bhat">Thai Bhat</ion-option>
+       <ion-option value="Thai Bhat1">Thai Rand</ion-option>
+       <ion-option value="Thai Bhat2">Thai Dollar</ion-option>      
+     </ion-select>   
+   </ion-item>
+ </ion-list>
+ 
+ <ion-list>
+   <ion-item>
+     <ion-label>Created in 2009, what was the first decentralized cryptocurrency?</ion-label>
+     <ion-select [(ngModel)]="Bitcoin">
+       <ion-option value="Bitcoin">Bitcoin</ion-option>
+       <ion-option value="Bitcoin2">Pipcoin</ion-option>
+       <ion-option value="Bitcoin3">Litecoin</ion-option>      
+     </ion-select>   
+   </ion-item>
+ </ion-list>
+ 
+ 
+ <ion-list>
+   <ion-item>
+     <ion-label>Before the introduction of the euro, what was the name for the basic monetary unit used in the Netherlands?</ion-label>
+     <ion-select [(ngModel)]="Guilder">
+       <ion-option value="Guilder">Guilder</ion-option>
+       <ion-option value="Guilder2">Dollar</ion-option>
+       <ion-option value="Guilder3">Netherlands</ion-option>      
+     </ion-select>   
+   </ion-item>
+ </ion-list>
+ 
+ <ion-list>
+   <ion-item>
+     <ion-label>What was the name of the currency used in Spain before the euro?</ion-label>
+     <ion-select [(ngModel)]="Pesetas">
+       <ion-option value="Pesetas">Pesetas</ion-option>
+       <ion-option value="Pesetas1">Dollar</ion-option>
+       <ion-option value="Pesetas2">spanini</ion-option>      
+     </ion-select>   
+   </ion-item>
+ </ion-list>
+ 
+ <ion-list>
+   <ion-item>
+     <ion-label>What is the name of the official currency of Costa Rica?</ion-label>
+     <ion-select [(ngModel)]="CostaRicanColon">
+       <ion-option value="CostaRicanColon">Costa Rican Colón</ion-option>
+       <ion-option value="CostaRicanColon2">Dollar</ion-option>
+       <ion-option value="CostaRicanColon3">euro</ion-option>      
+     </ion-select>   
+   </ion-item>
+ </ion-list>  
+ <button ion-button (click)="btn2()" block style="background-color: red">next</button> 
+</div>
+
+ 
+
+<div *ngIf="SouthAfricaPolitics">
+
+<!-- South Africa Politics -->
+<h1 id="h101">South Africa Politics </h1>
+
+<br>
+<ion-list>
+  <ion-item>
+    <ion-label>By 2009, The African National Congress (ANC) was the majority party controlling eight of the country's nine provinces. The province it did not control was ... ?</ion-label>
+    <ion-select [(ngModel)]="WesternCape">
+      <ion-option   value="WesternCape"> Western Cape</ion-option>
+      <ion-option value="WesternCape2">Free State</ion-option>
+      <ion-option value="WesternCape3">KwaZulu-Natal</ion-option>      
+    </ion-select>   
+  </ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-item>
+    <ion-label>"Umkhonto we Sizwe" was the armed wing of the African National Congress (ANC) which fought against the South African apartheid government. Its name is tranlated as "? of the nation"</ion-label>
+    <ion-select [(ngModel)]="Spear">
+      <ion-option value ="Spear3"> Gun</ion-option>
+      <ion-option value=" Spear2">Sword</ion-option>
+      <ion-option value="Spear"> Spear</ion-option>      
+    </ion-select>   
+  </ion-item>
+</ion-list>
+
+
+<ion-list>
+  <ion-item>
+    <ion-label>Which of these is not a South African political party ?</ion-label>
+    <ion-select [(ngModel)]="PAfricanPeoplesConvention">
+      <ion-option value=" PAfricanPeoplesConvention1">Democratic Alliance</ion-option>
+      <ion-option value="PAfricanPeoplesConvention">African People's Convention</ion-option>
+      <ion-option value=" PAfricanPeoplesConvention3">Pan Africanist Congress</ion-option>      
+    </ion-select>   
+  </ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-item>
+    <ion-label>Which among these leaders was not a South African president ?</ion-label>
+    <ion-select [(ngModel)]=" ChakaZulu">
+      <ion-option value=" ChakaZulu2">Pieter Botha</ion-option>
+      <ion-option value=" ChakaZulu3">FW de Klerk</ion-option>
+      <ion-option value="ChakaZulu">Chaka Zulu</ion-option>      
+    </ion-select>   
+  </ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-item>
+    <ion-label>In 1913 Land Act was introduced in South Africa.in order to prevent blacks, except those living in Cape Province, from ... ?    </ion-label>
+    <ion-select [(ngModel)]="Travelling">
+      <ion-option value="Travelling">Travelling</ion-option>
+      <ion-option value=" Travelling2">Buying land outside reserves</ion-option>
+      <ion-option value="Travelling3"> Building permanent houses</ion-option>      
+    </ion-select>   
+  </ion-item>
+</ion-list>
+<button ion-button (click)="btn3()" block style="background-color: red">next</button> 
+</div>
+  
+<div  *ngIf="Results" id="center">
+
+    
+        
+      
+
+ 
+  <p id="h101" >Name          : {{name}} </p>
+  <p id="h101" >You got       : {{countscore}}/15</p>
+  <p id="h101" >Your score is : {{percentage}}%</p>
+  <p id="h101" >Your time was : {{timerVal}} seconds</p>
+  <p id="h101" >Correct Answers</p><br>
+  <p id="h101" >ComputerTrivia</p>
+  <!-- <p style="text-align: center">1. Super Nintendo Entertainment System </p> -->
+  <p style="text-align: center">1. {{q1}} </p>
+  <p style="text-align: center">2. {{q2}}</p>
+  <p style="text-align: center">3. {{q3}}</p>
+  <p style="text-align: center">4. {{q4}}</p>
+  <p style="text-align: center">5. {{q5}}</p><br>
+  <p id="h101" >Money Trivia</p>
+  <p style="text-align: center">1. {{q6}}</p>
+  <p style="text-align: center">2. {{q7}}</p>
+  <p style="text-align: center">3. {{q8}}</p>
+  <p style="text-align: center">4. {{q9}}</p>
+  <p style="text-align: center">5. {{q10}}</p><br>
+  <p id="h101" >South Africa Politics</p>
+  <p style="text-align: center">1. {{q15}}</p>
+  <p style="text-align: center">2. {{q14}}</p>
+  <p style="text-align: center">3.{{q13}}</p>
+  <p style="text-align: center">4. {{q12}}</p>
+  <p style="text-align: center">5. {{q11}}</p>
+  <button style=" background-color: red" ion-button (click)="start()" block>start over</button>
+
+
+  
+</div>
+<div *ngIf= "about">
+  <p style="text-align: center; font-size: 2em; margin-top: 0em">About Quiz App</p>
+  <p>A quiz is a form of game or mind sport, in which the players (as individuals or in teams) attempt to answer questions correctly. It is a game to test your knowledge about a certain subject</p>
+  <p>in this quiz app you will be tested in 3 cataegories <br><li> Computers</li><li>Money</li><li>South South Africa Politics</li></p>
+  <p style="text-align: center">Rules</p>
+  <p><li>All answers must be answered within 60 seconds</li><li>select one best answer per question</li><li>You will be graded at the end of all three sections</li></p>
+    <button style=" background-color: red;" id = "btnBack" ion-button (click)="back1()" block>back</button>
+</div>
 </ion-content>
+
+

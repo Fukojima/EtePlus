@@ -1,0 +1,220 @@
+<ion-header>
+
+  <ion-title>
+    Quiz
+  </ion-title>
+
+</ion-header>
+
+<ion-content class='gg' padding>
+
+  <div *ngIf="fressy">
+    <h1 style="font-size: 32px;font-family: cursive">Português</h1>
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]=name></ion-input>
+    </ion-item>
+    <button id="btn" class='but' ion-button (click)="btn0()" block>Iniciar</button>
+   <!--<button id="btn" style=" background-color: red" ion-button (click)="about1()" block>Sobre</button>-->
+  </div>
+  <div *ngIf="ComputerTrivia ">
+
+    <!-- Category: Computer Trivia -->
+
+    <h1 id="h101">Categoria: Interpretação de texto</h1>
+
+    <p id="ph"> 1.Adolescentes: mais altos, gordos e preguiçosos
+
+      A oferta de produtos industrializados e a falta de tempo têm sua parcela de responsabilidade no aumento da
+      silhueta dos jovens. “Os nossos hábitos alimentares, de modo geral, mudaram muito”, observa Vivian Ellinger,
+      presidente da Sociedade Brasileira de Endocrinologia e Metabologia (SBEM), no Rio de Janeiro. Pesquisas mostram
+      que, aqui no Brasil, estamos exagerando no sal e no açúcar, além de tomar pouco leite e comer menos frutas e
+      feijão.
+
+      Outro pecado, velho conhecido de quem exibe excesso de gordura por causa da gula, surge como marca da nova
+      geração: a preguiça. “Cem por cento das meninas que participam do Programa não praticavam nenhum esporte”, revela
+      a psicóloga Cristina Freire, que monitora o desenvolvimento emocional das voluntárias.
+
+      Você provavelmente já sabe quais são as consequências de uma rotina sedentária e cheia de gordura. “E não é
+      novidade que os obesos têm uma sobrevida menor”, acredita Claudia Cozer, endocrinologista da Associação Brasileira
+      para o Estudo da Obesidade e da Síndrome Metabólica. Mas, se há cinco anos os estudos projetavam um futuro sombrio
+      para os jovens, no cenário atual as doenças que viriam na velhice já são parte da rotina deles. “Os adolescentes
+      já estão sofrendo com hipertensão e diabete”, exemplifica Claudia.
+
+      DESGUALDO, P. Revista Saúde. Disponível em: http://saude.abril.com.br. Acesso em: 28 jul. 2012 (adaptado).
+
+
+
+      Sobre a relação entre os hábitos da população adolescente e as suas condições de saúde, as informações
+      apresentadas no texto indicam que:</p>
+
+    <ion-item>
+      <ion-label> A falta de atividade física somada a uma alimentação nutricionalmente desequilibrada constituem
+        fatores relacionados ao aparecimento de doenças crônicas entre os adolescentes. </ion-label>
+      <ion-checkbox [(ngModel)]="A1"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>A diminuição do consumo de alimentos fontes de carboidratos combinada com um maior consumo de alimentos
+        ricos em proteínas contribuíram para o aumento da obesidade entre os adolescentes.</ion-label>
+      <ion-checkbox [(ngModel)]="A2"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>A maior participação dos alimentos industrializados e gordurosos na dieta da população adolescente tem
+        tornado escasso o consumo de sais e açúcares, o que prejudica o equilíbrio metabólico.</ion-label>
+      <ion-checkbox [(ngModel)]="A3"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>a ocorrência de casos de hipertensão e diabetes entre os adolescentes advém das condições de
+        alimentação, enquanto que na população adulta os fatores hereditários são preponderantes.</ion-label>
+      <ion-checkbox [(ngModel)]="A4"></ion-checkbox>
+    </ion-item>
+
+    <p id="ph">2.</p><img src='../../../assets/img/mafalda.png' />
+    <p id="ph">Mafalda é criação do cartunista argentino Quino. Menina precoce, serviu como porta-voz de seu criador nos
+      tempos da Ditadura Militar argentina;</p>
+    <ion-item>
+      <ion-label class='cx'>Mafalda ainda não sabe exatamente o significado da expressão “indicador de desemprego”
+      </ion-label>
+      <ion-checkbox [(ngModel)]="B1"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Mafalda emprega o mesmo valor semântico para o vocábulo “indicador” no primeiro e no último quadrinho.
+      </ion-label>
+      <ion-checkbox [(ngModel)]="B2"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Apesar de ser uma criança, Mafalda já percebe as injustas relações de trabalho estabelecidas entre
+        patrões e operários.</ion-label>
+      <ion-checkbox [(ngModel)]="B3"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mafalda não sabe a importância do dedo indicador.</ion-label>
+      <ion-checkbox [(ngModel)]="B4"></ion-checkbox>
+    </ion-item>
+    <p id="ph">3. </p><img src='../../../assets/img/tex.png' />
+
+    <p>A publicidade, de uma forma geral, alia elementos verbais e imagéticos na constituição de seus textos. Nessa peça
+      publicitária, cujo tema é a sustentabilidade, o autor procura convencer o leitor a:</p>
+    <ion-item>
+      <ion-label>Abraçar a campanha, desenvolvendo projetos sustentáveis.</ion-label>
+      <ion-checkbox [(ngModel)]="C1"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Consumir produtos de modo responsável e ecológico.</ion-label>
+      <ion-checkbox [(ngModel)]="C2"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Evitar o consumo excessivo de produtos reutilizáveis.</ion-label>
+      <ion-checkbox [(ngModel)]="C3"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Assumir uma atitude reflexiva diante dos fenômenos naturais.</ion-label>
+      <ion-checkbox [(ngModel)]="C4"></ion-checkbox>
+    </ion-item>
+
+    <p id="ph"> 4.QUE VAI SER quando crescer? Vivem perguntando em redor. Que é ser? É ter um corpo, um jeito, um nome?
+      Tenho os três. E sou? Tenho de mudar quando crescer? Usar outro nome, corpo e jeito? Ou a gente só principia a ser
+      quando cresce? É terrível, ser? Dói? É bom? É triste? Ser: pronunciado tão depressa, e cabe tantas coisas? Repito:
+      ser, ser, ser. Er. R. Que vou ser quando crescer? Sou obrigado a? Posso escolher? Não dá para entender. Não vou
+      ser. Não quero ser. Vou crescer assim mesmo. Sem ser. Esquecer.
+      ANDRADE, C. D. Poesia e prosa. Rio de Janeiro: Nova Aguilar, 1992.
+
+      A inquietação existencial do autor com a autoimagem corporal e a sua corporeidade se desdobra em questões
+      existenciais que têm origem
+    </p>
+
+    <ion-item>
+      <ion-label>Na aceitação das imposições da sociedade seguindo a influência de outros.</ion-label>
+      <ion-checkbox [(ngModel)]="D1"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Na confiança no futuro, ofuscada pelas tradições e culturas familiares.</ion-label>
+      <ion-checkbox [(ngModel)]="D2"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>No conflito do padrão corporal imposto contra as convicções de ser autêntico e singular.</ion-label>
+      <ion-checkbox [(ngModel)]="D3"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>No anseio de divulgar hábitos enraizados, negligenciados por seus antepassados.</ion-label>
+      <ion-checkbox [(ngModel)]="D4"></ion-checkbox>
+    </ion-item>
+
+    <p id="ph"> 5. MOSTRE QUE SUA MEMÓRIA É MELHOR DO QUE A DE COMPUTADOR E GUARDE ESTA CONDIÇÃO: 12X SEM JUROS.
+      Revista Época. N° 424, 03 jul. 2006.
+
+      Ao circularem socialmente, os textos realizam-se como práticas de linguagem, assumindo funções específicas,
+      formais e de conteúdo. Considerando o contexto em que circula o texto publicitário, seu objetivo básico é
+    </p>
+
+    <ion-item>
+      <ion-label>Influenciar o comportamento do leitor, por meio de apelos que visam à adesão ao consumo.</ion-label>
+      <ion-checkbox [(ngModel)]="E1"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Definir regras de comportamento social pautadas no combate ao consumismo exagerado</ion-label>
+      <ion-checkbox [(ngModel)]="E2"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Defender a importância do conhecimento de informática pela população de baixo poder aquisitivo.
+      </ion-label>
+      <ion-checkbox [(ngModel)]="E3"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Facilitar o uso de equipamentos de informática pelas classes sociais economicamente desfavorecidas.
+      </ion-label>
+      <ion-checkbox [(ngModel)]="E4"></ion-checkbox>
+    </ion-item>
+    <button ion-button (click)="btn1()" block  class='but1'>Concluir</button>
+
+  </div>
+  <div *ngIf="Results" id="center">
+
+    <p id="h101">Nome : {{name}} </p>
+    <p id="h101">Você acertou : {{countscore}}/5</p>
+    <p id="h101">Sua nota é: {{percentage}}%</p>
+    
+    <p id="h101">Respostas corretas</p><br>
+    <p id="h101">Português</p>
+    <!-- <p style="text-align: center">1. Super Nintendo Entertainment System </p> -->
+    <p style="text-align: center">1. {{q1}} </p>
+    <p style="text-align: center">2. {{q2}}</p>
+    <p style="text-align: center">3. {{q3}}</p>
+    <p style="text-align: center">4. {{q4}}</p>
+    <p style="text-align: center">5. {{q5}}</p><br>
+
+    <button  class='but1' ion-button (click)="start()" block>sReiniciar</button>
+
+
+
+  </div>
+  <div *ngIf="about">
+    <p style="text-align: center; font-size: 2em; margin-top: 0em">About Quiz App</p>
+    <p>A quiz is a form of game or mind sport, in which the players (as individuals or in teams) attempt to answer
+      questions correctly. It is a game to test your knowledge about a certain subject</p>
+    <p>in this quiz app you will be tested in 3 cataegories <br>
+      <li> Computers</li>
+      <li>Money</li>
+      <li>South South Africa Politics</li>
+    </p>
+    <p style="text-align: center">Rules</p>
+    <p>
+      <li>All answers must be answered within 60 seconds</li>
+      <li>select one best answer per question</li>
+      <li>You will be graded at the end of all three sections</li>
+    </p>
+    <button class='but' id="btnBack" ion-button (click)="back1()" block>back</button>
+  </div>
+</ion-content>

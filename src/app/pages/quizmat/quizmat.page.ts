@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { identifierModuleUrl } from '@angular/compiler';
+
 import { Storage } from '@ionic/storage';
 import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/observable/interval'
+
 
 @Component({
-  selector: 'page-signup',
-  templateUrl: 'signup.html',
-  styleUrls: ['./signup.scss'],
+  selector: 'quizmat',
+  templateUrl: './quizmat.page.html',
+  styleUrls: ['./quizmat.page.scss'],
 })
-export class SignupPage {
+export class QuizmatPage  {
+
   timerVar;
   timerVal;
   Travelling1;Travelling2;Travelling3;
@@ -19,11 +20,12 @@ export class SignupPage {
   Spear1;Spear2;Spear3;
   WesternCape1
 score = 0;
-A1;A2;A3;
-B3;B2;B1;
-C1;C2;C3;
-D1;D2;D3;
-E1;E2;E3;CostaRicanColon;CostaRicanColon1;CostaRicanColon2;CostaRicanColon3;
+A1;A2;A3;A4;
+B3;B2;B1;B4;
+C1;C2;C3;C4;
+D1;D2;D3;D4;
+E1;E2;E3;E4;
+CostaRicanColon;CostaRicanColon1;CostaRicanColon2;CostaRicanColon3;
 ThaiBhat1;ThaiBhat2;ThaiBhat3;Pesetas;Pesetas1;Pesetas2;Pesetas3;
 ThaiBhat;Bitcoin; Bitcoin1;Bitcoin2;Bitcoin3;Guilder;Guilder1;Guilder2;Guilder3
 WesternCape;WesternCape2;WesternCape3;Spear;PAfricanPeoplesConvention;PAfricanPeoplesConvention2;PAfricanPeoplesConvention3;ChakaZulu;Travelling;
@@ -40,7 +42,7 @@ key:string = "name";
 
 
 counter:number=0;
-  constructor(public navCtrl: NavController,private storage: Storage) {
+  constructor(private storage: Storage) {
   this.fressy = true;
 
  this.ThaiBhat1 = "Thai Bhat";
@@ -84,15 +86,19 @@ counter:number=0;
     {
     this.score +=10;
     this.countscore += 1 ;
-    this.q1 = "correct"
+    this.q1 = "Correto"
     }
     else if(this.A2 == true)
     {
-      this.q1="wrong answer, the corect answer is Super Nintendo Entertainment System"
+      this.q1="Resposta errada, a alternativa correta era 'A'"
     }
     else if(this.A3 == true){
-      this.q1="wrong answer, the corect answer is Super Nintendo Entertainment System"
-    }else{
+      this.q1="Resposta errada, a alternativa correta era 'A'"
+    }
+    else if(this.A4 == true){
+      this.q1="Resposta errada, a alternativa correta era 'A'"
+    }
+    else{
       this.q1 = "nothing was checked,  the corect answer is Super Nintendo Entertainment System"
     }
 
@@ -105,18 +111,25 @@ counter:number=0;
       this.q2 = "wrong answer, the corect answer is Facebook"
     }else if (this.B2 == true){
       this.q2  = "wrong answer, the corect answer is Facebook"
-    }else{
+    }else if (this.B4 == true){
+      this.q2  = "wrong answer, the corect answer is Facebook"
+    }
+
+    else{
       this.q2 = "nothing was checked,  the corect answer is Facebook"
     }
 
 
-    if(this.C1 == true){
+    if(this.C2 == true){
      this.score +=10;
      this.countscore += 1 ;
      this.q3 = "correct"
-    }else if(this.C2){
+    }else if(this.C4){
       this.q3 = "wrong answer, the corect answer is The Legend of Zelda"
     }else if (this.C3){
+      this.q3 = "wrong answer, the corect answer is The Legend of Zelda"
+    }
+    else if (this.C1){
       this.q3 = "wrong answer, the corect answer is The Legend of Zelda"
     }
     else{
@@ -434,5 +447,4 @@ this.fressy = true;
 
   
 }
-    
-  
+
